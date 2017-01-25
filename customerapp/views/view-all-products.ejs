@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
+<div class="container">
+ <td> <a href="/add-new-product" class="btn btn-info" role="button">Add product</a></td>
+<h1> view all products </h1>
+<ul>
+<table class="table table-hover">
+<tr>
+	<th>Product name</th>
+	<th>Category</th>
+	<th>Description</th>
+	<th>Price</th>
+	<th>Quantity</th>
+</tr> 
+<% for(var i=0; i<products.length; i++) {%>
+   <tr>
+      <td> <%= products[i].productName %> </td>
+      <td> <%= products[i].category %> </td>
+      <td> <%= products[i].description %> </td>
+      <td> <%= products[i].price %> </td>
+      <td> <%= products[i].quantity %> </td>
+      <td> <a href="delete-product/<%= products[i]._id %>" class="btn btn-info" role="button">Delete</a></td>
+      <td> <a href="update-product/<%= products[i]._id %>" class="btn btn-info" role="button">Update</a></td>
+   </tr>
+<% } %>
+</table>
+
+</body>
+</htmL.
